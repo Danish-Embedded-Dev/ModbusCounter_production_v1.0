@@ -26,6 +26,11 @@
  
 #ifdef INTERNAL_EEPROM_ENABLE
 
+#define MSB_CAST(_UINT32_T)        (uint16_t((_UINT32_T)&0xFFFF))      //return higher uint16_t on return
+#define LSB_CAST(_UINT32_T)        (uint16_t((_UINT32_T>>16)&0xFFFF))  //return lower uint16_t  on return
+#define MSB_SHIFT(_UINT16_T)       (((uint32_t)_UINT16_T<<16)&0xFFFFFFFF) //return concatenate uint32_t on return
+#define LSB_SHIFT(_UINT16_T)       (uint32_t((_UINT16_T)&0x0000FFFF))       //return concatenate uint32_t on return
+
 //---------------SERIAL-COMMUNICATION-----------
 //  SERIAL_8N1  0B00000000 || 0 //modbus Serial config mode of operation
 //  SERIAL_8N2  0B00100000 || 32
@@ -36,10 +41,6 @@
 //  SERIAL_8E2  0B00101010 || 42
 //  SERIAL_8O1  0B00001011 || 11
 //  SERIAL_NORMAL_STATE8O2  0B00101011 || 43
-#define MSB_CAST(_UINT32_T)        (uint16_t((_UINT32_T)&0xFFFF))      //return higher uint16_t on return
-#define LSB_CAST(_UINT32_T)        (uint16_t((_UINT32_T>>16)&0xFFFF))  //return lower uint16_t  on return
-#define MSB_SHIFT(_UINT16_T)       (((uint32_t)_UINT16_T<<16)&0xFFFFFFFF) //return concatenate uint32_t on return
-#define LSB_SHIFT(_UINT16_T)       (uint32_t((_UINT16_T)&0x0000FFFF))       //return concatenate uint32_t on return
 
 
 struct  Default_variable {
