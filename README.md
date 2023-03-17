@@ -15,7 +15,7 @@ some basic features for this module are .
 ## PARAMETER
 There are some parameter for setting the module which are discuss below
 - **Slave_ID**: It is use to give device an ID which is in range (1-255) . Default is **1**
-- **Serial_Conf**:  Device have some selected Serial configuration Defaults 
+- **Serial_Configuration**:  Device have some selected Serial configuration Defaults 
 is **wordlenght** = 8 **parity** =none  **stop bits** = 1
 - **Serial_Baud**:  device have some selection of baudrate which are 2400,4800,9600,19200,38400 Default is **9600**
 - **Network_timeout**:  Network timeout use to set the status led for how long it turn off when command recieves (its in milliseconds)
