@@ -22,7 +22,7 @@ is **wordlenght** = 8 **parity** =none  **stop bits** = 1
 - **Debounce_time**:  Debounce time is use to set the debounce for the input button Default is **200**
 - **Count_1**:  Count_1 are use to set the offset to the counter so that the count of input_1 will start increament from the offset which set  Default is **0**
 - **Count_2**:  Count_2 are use to set the offset to the counter so that the count of input_2 will start increament from the offset which set  Default is **0**
-- **EPOCH**:  Epouch is use for setting the current time in second to the controller so that controller sync to current time and Default is **0** from the power on 
+- **EPOCH**:  Epoch is use for setting the current time in second to the controller so that controller sync to current time and Default is **0** from the power on 
 
 ## INPUT BUTTON
 
